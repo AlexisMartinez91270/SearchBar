@@ -19,3 +19,69 @@ function search_value() {
     }
   }
 }
+
+let valeurs = [
+  "Beauty",
+  "Birth",
+  "Chastity",
+  "Chivalry",
+  "Courage",
+  "Enthusiasm",
+  "Faith",
+  "Fertility",
+  "Gentleness",
+  "Glory",
+  "Greed",
+  "Grief",
+  "Hope",
+  "Immortality",
+  "Intelligence",
+  "Joy",
+  "Justice",
+  "Knowledge",
+  "Labor",
+  "Light",
+  "Longevity",
+  "Love",
+  "Loyalty",
+  "Luck",
+  "Magnanimity",
+  "Majesty",
+  "Merit",
+  "Obediance",
+  "Parenthood",
+  "Patiente",
+  "Peace",
+  "Power",
+  "Prophecy",
+  "Prosperity",
+  "Protection",
+  "Prudence",
+  "Purity",
+  "Sacrifice",
+  "Secrecy",
+  "Sovereignty",
+  "Spirit",
+  "Strenght",
+  "Temperance",
+  "Victory",
+  "Vigilance",
+  "Virility",
+  "Virtue",
+  "Warrior",
+  "Wealth",
+  "Widsom",
+];
+
+let list = document.getElementById("myList");
+
+const loadList = function () {
+  valeurs.forEach((item) => {
+    let li = document.createElement("li");
+    li.className = "val";
+    li.innerText = item;
+    list.appendChild(li);
+  });
+};
+
+window.onload = loadList();
