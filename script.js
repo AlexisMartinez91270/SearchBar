@@ -13,9 +13,7 @@ function search_value() {
     v[i].style.display = "none";
   }
   //2. vérifier que l'utilisateur a entré qq chose (au cas ou il est revenu en arriere (backspace))
-  if (input.length < 1) {
-    return;
-  }
+  if (input.length < 1) return;
   //3. créer nouvelle liste contenant seulement les éléments nécessaire (mettre lettres que celles saisie par l'utilisateur)
   for (let i = 0; i < valeurs.length; i++) {
     let listelem = valeurs[i].toLowerCase();
