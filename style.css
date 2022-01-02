@@ -11,7 +11,7 @@ input[type="text"] {
 }
 
 /* When the input field gets focus,
-         change its width to 100% */
+           change its width to 100% */
 input[type="text"]:focus {
   width: 70%;
 }
@@ -21,7 +21,7 @@ input[type="text"]:focus {
   margin-left: 90px;
 }
 
-.val {
+/* .val {
   display: none;
-}
+} */
 
