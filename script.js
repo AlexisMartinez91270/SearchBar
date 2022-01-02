@@ -1,16 +1,16 @@
 "use strict";
 
-let list = document.getElementById("myList");
+let list = $("#myList");
 
 function search_value() {
-  let input = document.getElementById("searchbar").value;
+  let input = $("#searchbar").val();
   input = input.toLowerCase();
-  let v = document.getElementsByClassName("val");
+  let v = $(".val");
   let result = [];
 
   //1.reset list
   for (let i = 0; i < v.length; i++) {
-    v[i].style.display = "none";
+    $(v[i]).hide();
   }
   //2. vérifier que l'utilisateur a entré qq chose (au cas ou il est revenu en arriere (backspace))
   if (input.length < 1) return;
@@ -21,19 +21,20 @@ function search_value() {
       result.push(valeurs[i]);
     }
   }
-  list.textContent = "";
+  $(list).text("");
   console.log(result);
 
   result.forEach((item) => {
     let li = document.createElement("li");
-    li.className = "val";
-    li.innerText = item;
-    list.appendChild(li);
+    $(li).addClass("val");
+    $(li).text(item);
+    $(list).append(li);
+    console.log(list.text());
   });
 
   //4. rendre visible les éléments qui correspondent à l'entrée utilisateur
   for (let y = 0; y < v.length; y++) {
-    v[y].style.display = "list-item";
+    $(v[y]).show();
   }
 }
 
